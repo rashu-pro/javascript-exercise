@@ -78,8 +78,22 @@ function countChar(string, char) {
     return counter;
 }
 
-
 console.log("Total B in the string: ", countBs("BBC"));
 // → 2
 console.log("Total K in the string: ", countChar("kakkerlak", "k"));
-  // → 4
+// → 4
+
+/**
+ * JSON
+ */
+const jsonObject = {
+    "property1":"value1",
+    "property2":"value2",
+    "property3":["v1","v2","v3"]
+}
+//--- JSON to string
+let jsonToString = JSON.stringify(jsonObject);
+console.log("json to string: ", jsonToString);
+
+let stringToJson = JSON.parse(jsonToString);
+console.log("string to json: ", stringToJson);
