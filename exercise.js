@@ -21,7 +21,7 @@ console.log("Sum of two number is: ", sum(2, 3));
  * @note CANT CALL BEFORE INITIALIZATION
  */
 let multiplication = (a, b) => {
-    return a + b;
+    return a * b;
 };
 console.log("Multiplication of two numbers: ", multiplication(3, 4));
 
