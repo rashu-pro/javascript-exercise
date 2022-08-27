@@ -97,3 +97,39 @@ console.log("json to string: ", jsonToString);
 
 let stringToJson = JSON.parse(jsonToString);
 console.log("string to json: ", stringToJson);
+
+/**
+ * 
+ * @param {number} start 
+ * @param {number} end 
+ * @param {number} step 
+ * @returns {range of the numbers}
+ */
+function range(start, end, step = start<end?1:-1){
+    let numbers = [];
+    if(step<0){
+        for(let i=start; i>=end; i+=step){
+            numbers.push(i);
+        }
+    }else{
+        for(let i=start; i<=end; i+=step){
+            numbers.push(i);
+        }
+    }
+    return numbers;
+}
+console.log("range of numbers: ", range(5, 3, -1));
+
+/**
+ * 
+ * @param {array of number} numbers 
+ * @returns {sum of the numbers of the given array}
+ */
+function arraySum(numbers){
+    let sum = 0;
+    for (let i=0; i<numbers.length; i++){
+        sum = sum + numbers[i];
+    }
+    return sum;
+}
+console.log("sum of the numbers: ", arraySum(range(1, 10)));
